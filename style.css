@@ -13,7 +13,6 @@ body {
   align-items: center;
   height: 100vh;
   background-size: 100% 100%;
-  background-position: 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
   background: linear-gradient(
     to right,
     #eea2a2 0%,
@@ -23,20 +22,22 @@ body {
     #7ac5d8 100%
   );
 }
-
+h1 {
+  font-size: 40px;
+  background: -webkit-linear-gradient(#002bec, #ff0000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .container {
   text-align: center;
 }
 
 .weather-card {
   background-size: 100% 100%;
-  background-position: 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px,
-    0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
   border-radius: 50px;
   background: #e0e0e0;
   box-shadow: inset -20px 20px 60px #696262, inset 20px -20px 60px #64626b;
   padding: 20px;
-  /* box-shadow: 0 0 30px rgba(0, 0, 0, 0.1); */
   transition: transform 0.3s ease-in-out;
   width: 450px;
   text-align: center;
@@ -47,12 +48,19 @@ body {
 }
 
 #city-input {
-  padding: 15px;
-  margin: 10px 0;
-  width: 70%;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
+  text-align: center;
+  padding: 2px;
+  margin: 10px 30px;
+  width: 60%;
+  border: 1px solid #3f3c3c;
+  border-radius: 10px;
+  font-size: 25px;
+  font-family: "Playwrite DE Grund";
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(116, 203, 199) 0%,
+    rgb(220, 246, 200) 90%
+  );
 }
 
 #city-input:focus {
@@ -64,20 +72,23 @@ body {
   color: #aaa;
 }
 
-#city-input-btn {
-  padding: 10px;
-  background-color: #2196f3;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
+/* button css */
+#btn {
+  width: 120px;
+  height: 40px;
+  border: 3px solid #315cfd;
+  border-radius: 45px;
+  transition: all 0.3s;
   cursor: pointer;
+  background: white;
+  font-size: 1em;
+  font-weight: 550;
 }
-
-#city-input-btn:hover {
-  background-color: #1565c0;
+#btn:hover {
+  background: #315cfd;
+  color: white;
+  font-size: 1.1em;
 }
-
 #weather-info {
   display: none;
 }
@@ -101,7 +112,6 @@ body {
   font-size: 16px;
   color: rgb(255, 0, 0);
 }
-
 #date {
   font-size: 14px;
   color: rgb(255, 0, 0);
